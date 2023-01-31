@@ -1,5 +1,4 @@
 import random
-import math
 import json
 
 def generate_site(id_num): # generates a dictionary of properties for site
@@ -17,4 +16,7 @@ site_list = []
 for x in range(5): # generate 5 sites with random properties
     site_list.append(generate_site(x+1))
 
-site_dict = {"sites": site_list}
+site_dict = {"sites": site_list} 
+
+with open('sites.json', 'w') as out:
+    json.dump(site_dict, out, indent=2)
