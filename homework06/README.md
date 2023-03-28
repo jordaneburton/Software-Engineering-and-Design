@@ -11,6 +11,7 @@ Install the project by cloning the repository. Docker is required to operate thi
 ## Program Descriptions
 ### Gene API
 `gene_api.py`, is an API with three distinct routes. These routes allow us to query information on HGNC data from the Human Genome Organization ([HUGO](https://www.genenames.org/download/archive/)). Here is a list of the routes along with brief descriptions:
+| Route | Method | Description |
 |---|---|---|
 |`/data`| GET | Return all data from the Redis database |
 |`/data`| POST | Put data into the Redis database from the HUGO website |
@@ -63,6 +64,7 @@ Once you have data posted in the database, you can use the route, `/genes/<hgnc_
 ```
 ## Data Interpretation
 Most of the data is in the form of ID(used for database identification), but the following data is the most interesting:
+| Key | Data |
 |---|---|
 | hgnc\_id | HGNC ID. A unique ID created by the HGNC for every approved symbol |
 | locus\_group | A group name for a set of related locus types as defined by the HGNC (e.g. non-coding RNA) |
