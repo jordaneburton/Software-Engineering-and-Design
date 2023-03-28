@@ -1,8 +1,10 @@
 # Say It Ain't Genes - Jordan Burton
 For this assignment, we gather data from the Human Genome Organization(HUGO). HUGO is a non-profit organzation which oversees the HUGO Gene Nomenclature Committee(HGNC). The HGNC sorts and identifies names for genes. This program will download their entire set of HGNC data into a Redis database through a Flask interface. This assignment helps us to get acquainted with the Redis databases and how to integrate them with our use of Flask and Docker. 
-## Include Files
+## Included Files
 `gene_api.py` - is the main python script that executes our Flask API. It retrieves data from HUGO's website utilizing various http requests. These requests are sent using the routes built into the script.
+
 `docker-compose.yml` - allows the user to skip a few steps in the process of running the docker image. It allows us to use a single command to both create an image and run it.
+
 `Dockerfile` - allows us to create the docker image as well as containerize our program. Through containerizing the script, we can install all the necessary libraries and requirements needed to run the program as intended. This allows a user to not worry about making sure they have the correct version of certain libraries. Instead the Dockerfile takes care of that for us.
 ## Installation
 Install the project by cloning the repository. Docker is required to operate this project. In turn, all necessary libraies are handled via Docker's containerization. When the program is run through a docker image, all necessary libraries will be accounted for.
