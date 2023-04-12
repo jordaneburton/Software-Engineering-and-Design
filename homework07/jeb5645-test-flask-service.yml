@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jeb5645-test-flask-service
+spec:
+  type: ClusterIP
+  selector:
+    username: jeb5645
+    env: test
+    app: jeb5645-test-flask
+  ports:
+  - name: jeb5645-test-flask
+    port: 5000
+    targetPort: 5000

@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jeb5645-test-redis-service
+spec:
+  type: ClusterIP
+  selector:
+    username: jeb5645
+    env: test
+    app: jeb5645-test-redis
+  ports:
+  - name: jeb5645-test-redis
+    port: 6379
+    targetPort: 6379
