@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jeb5645-test-data
+  labels:
+    username: jeb5645
+    env: test
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: cinder-csi
+  resources:
+    requests:
+      storage: 1Gi

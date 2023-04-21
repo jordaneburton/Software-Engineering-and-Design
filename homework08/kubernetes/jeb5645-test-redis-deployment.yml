@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jeb5645-test-redis-deployment
+  labels:
+    username: jeb5645
+    env: test
+    app: jeb5645-test-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      username: jeb5645
+      env: test
+      app: jeb5645-test-redis
+  template:
+    metadata:
+      labels:
+        username: jeb5645
+        env: test
+        app: jeb5645-test-redis
+    spec:
+      containers:
+        - name: jeb5645-test
+          image: redis:7
+          volumeMounts:
+          - name: jeb5645-test-data
+            mountPath: "/data"
+      volumes:
+      - name: jeb5645-test-data
+        persistentVolumeClaim:
+          claimName: jeb5645-test-data
