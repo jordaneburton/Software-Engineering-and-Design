@@ -18,7 +18,7 @@ services:
             dockerfile: ./Dockerfile
         depends_on:
             - redis-db
-        image: jordaneburton/gene_api.py:1.0
+        image: jordaneburton/gene_api.py:2.0
         ports:
             - 5000:5000
         volumes:
